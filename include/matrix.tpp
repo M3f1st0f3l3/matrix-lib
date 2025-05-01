@@ -123,7 +123,7 @@ template <typename T> T Matrix<T>::determinant() {
   } else {
     for (size_t i = 0; i < cols; i++) {
       Matrix<T> m = ::Minor(A, fixed_row, i);
-      value += pow(-1, fixed_row + i) * A(fixed_row, i) * m.determinant();
+      value += std::pow(-1, fixed_row + i) * A(fixed_row, i) * m.determinant();
     }
   }
 
