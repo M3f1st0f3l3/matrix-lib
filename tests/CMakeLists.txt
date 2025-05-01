@@ -1,0 +1,8 @@
+add_executable(test_matrix test_matrix.cpp)
+add_executable(operations operations.cpp)
+add_executable(determinant determinant.cpp)
+include_directories(/Users/antoniocicchella/Programs/C++/matrix-lib/include/)
+target_link_libraries(test_matrix matrix)
+add_test( NAME TestMatrix COMMAND test_matrix)
+add_test( NAME Operations COMMAND operations)
+add_test( NAME Determinant COMMAND determinant)
